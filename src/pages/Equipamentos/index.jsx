@@ -35,7 +35,7 @@ export const Equipamentos = () => {
 
       axios({
         method: "post",
-        url: "http://localhost:5000/api/Equipamentos",
+        url: "https://appgrupo1.azurewebsites.net/api/Equipamentos",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       })
@@ -50,7 +50,7 @@ export const Equipamentos = () => {
     }
 
     const Listar = () => {
-      axios.get('http://localhost:5000/api/Equipamentos')
+      axios.get('https://appgrupo1.azurewebsites.net/api/Equipamentos')
       .then(resposta => {
         setProdutos(resposta.data);
       })
@@ -58,7 +58,7 @@ export const Equipamentos = () => {
     }
 
     const Remover = (id) => {
-      axios.delete('http://localhost:5000/api/Equipamentos/'+id)
+      axios.delete('https://appgrupo1.azurewebsites.net/api/Equipamentos/'+id)
       .then(() => {
         Listar();
       })
